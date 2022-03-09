@@ -34,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "axios": "^0.26.0",
+    "react-router-dom": "^6.2.2",
+    "sass": "^1.49.9",
+    "swiper": "^6.8.4"
   }
+  
 }
