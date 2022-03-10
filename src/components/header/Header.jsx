@@ -37,6 +37,7 @@ const Header = () => {
                     window.removeEventListener('scroll', shrinkHeader)
                }
           }
+          shrinkHeader()
      }, [])
      return (
           <div ref={headerRef} className='header'>

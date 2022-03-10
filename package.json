@@ -38,6 +38,8 @@
   },
   "devDependencies": {
     "axios": "^0.26.0",
+    "prop-types": "^15.8.1",
+    "query-string": "^7.1.1",
     "sass": "^1.49.9",
     "swiper": "^6.8.4"
   }
