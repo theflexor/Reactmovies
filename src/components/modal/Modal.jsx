@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import './modal.scss'
 const Modal = props => {
 
-     const [active, setActive] = useState(falsex)
+     const [active, setActive] = useState(false)
 
      useEffect(() => {
           setActive(props.active)
@@ -12,7 +12,7 @@ const Modal = props => {
 
      return (
           <div id={props.id} className={`modal ${active ? 'active' : ''}`}>
-               {props.chilred}
+               {props.children}
           </div>
      )
 }
@@ -24,23 +24,21 @@ Modal.propTypes = {
 
 export const ModalContent = props => {
      const contentRef = useRef(null)
-
      const closeModal = () => {
           contentRef.current.parentNode.classList.remove('active')
           if (props.onClose) props.onClose()
 
      }
      return (
-          <div className='modal__content'>
+          <div  ref={contentRef} className='modal__content'>
                {props.children}
-               <div className='modal__content__close' onClick={closeModal}></div>
-               <i className='bx bx-x'></i>
+               <div className='modal__content__close' onClick={closeModal}>
+                    <i className='bx bx-x'></i>
+               </div>
           </div>
      )
 }
 
-ModalContent.propTypes = {
-     onClose: PropTypes.func
-}
+
 
 export default Modal
