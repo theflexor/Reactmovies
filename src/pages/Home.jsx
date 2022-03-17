@@ -4,7 +4,6 @@ import { category, movieType, tvType } from '../api/tmDbApi'
 import { OutlineButton } from '../components/button/Button'
 import HeroSilde from '../components/hero-slide/HeroSlide'
 import MovieList from '../components/movie-list/MovieList'
-
 const Home = () => {
   return (
     <>
@@ -12,8 +11,8 @@ const Home = () => {
       <div className="container">
         {/* popular */}
         <div className="section mb-3">
-          <div className="section__header mb-2">
             <h2>Trending Movies</h2>
+          <div className="section__header mb-2">
             <Link to="/movie">
               <OutlineButton className="small">View more</OutlineButton>
             </Link>
