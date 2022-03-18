@@ -16,7 +16,7 @@ const HeroSilde = () => {
 
   useEffect(() => {
     const getMovies = async () => {
-      const params = { page: 1 }
+      const params = { page: 1 , language: 'ru'}
       try {
         const response = await tmdbApi.getMoviesList(movieType.popular, { params })
         setMovieItems(response.results.slice(0, 20))

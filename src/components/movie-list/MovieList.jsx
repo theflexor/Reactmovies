@@ -17,7 +17,9 @@ const MovieList = props => {
      useEffect(() => {
           const getList = async () => {
                let response = null
-               const params = {}
+               const params = {
+               language: 'ru'
+               }
 
                if (props.type !== 'similar') {
                     switch (props.category) {
