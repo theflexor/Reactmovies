@@ -7,7 +7,6 @@
      -webkit-tap-highlight-color: transparent;
 
      @include flex(center, unset);
-
      img {
           margin-right: 10px;
           width: 50px;
@@ -34,12 +33,13 @@
      }
 
      &__wrap {
-          @include flex(center, space-between)
+          @include flex(center, space-between);
+          @include mobile {
+               justify-content: center;
+          }
      }
 
-     @include mobile {
-          justify-content: center;
-     }
+
 
      &__nav {
           @include flex(center, unset);
